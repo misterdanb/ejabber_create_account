@@ -8,4 +8,4 @@ ejabberctl = "/home/h42i/ejabberd/sbin/ejabberdctl"
 user = input("User: ")
 password = getpass("Password: ")
 
-call([ejabberctl, user, host, password])
+call([ejabberctl, "register", user, host, password])
