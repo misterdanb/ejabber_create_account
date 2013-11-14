@@ -7,5 +7,9 @@ ejabberctl = "/home/h42i/ejabberd/sbin/ejabberdctl"
 
 user = input("User: ")
 password = getpass("Password: ")
+password_confirmation = getpass("Confirm password: ")
 
-call([ejabberctl, "register", user, host, password])
+if password == password_confirmation:
+    call([ejabberctl, "register", user, host, password])
+else:
+    print("Your password confirmation didn't match your password.")
